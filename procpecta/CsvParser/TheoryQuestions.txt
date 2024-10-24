@@ -1,0 +1,27 @@
+Tackling the Challenge
+
+    Parse the CSV: Read the CSV data using BufferedReader and store it in a map.
+
+    Evaluate Formulas: Iterate through the map to resolve and calculate formulas, ensuring dependencies are handled.
+
+    Write to Excel: Write the final data to an Excel file using Apache POI.
+
+Types of Errors to Check For
+
+    File Not Found: Ensure the input CSV file path is correct.
+
+    Invalid Format: Validate that CSV entries follow the expected key: value format.
+
+    Circular References: Prevent infinite loops by checking for circular dependencies in formulas.
+
+    Null Values: Handle cases where expected references in formulas are not present.
+
+How a User Might Break the Code
+
+    Incorrect CSV Format: Providing a CSV file that doesn't match the expected key: value format.
+
+    Circular Formulas: Adding formulas that reference each other circularly, leading to infinite loops.
+
+    Missing Dependencies: Including formulas that reference non-existent or misspelled keys.
+
+    Special Characters: Using unexpected characters in the CSV that might not be properly handled by the parsing logic.
